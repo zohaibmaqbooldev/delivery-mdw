@@ -1,0 +1,1 @@
+import{a as r}from"./chunk-H4BML6C2.js";import{b as o}from"./chunk-EK7ODJWE.js";var n=o(r(),1);function l(t,i=3e4){(0,n.useEffect)(()=>{let e=()=>document.visibilityState==="visible"&&t(),c=setInterval(e,i);return document.addEventListener("visibilitychange",e),()=>{clearInterval(c),document.removeEventListener("visibilitychange",e)}},[t,i])}export{l as a};
