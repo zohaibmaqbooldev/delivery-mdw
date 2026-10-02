@@ -1,0 +1,1 @@
+var r={admin:{label:"Admin",path:"/admin"},user:{label:"Customer",path:"/user"},shop:{label:"Shop",path:"/shop"},delivery:{label:"Delivery Boy",path:"/delivery"}},t=["user","shop","delivery"];function a(e){return r[e]?.path??"/"}function l(e){return r[e]?.label??e}export{t as a,a as b,l as c};
