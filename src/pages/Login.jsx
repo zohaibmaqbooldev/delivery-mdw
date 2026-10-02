@@ -37,8 +37,11 @@ export default function Login() {
   return (
     <div className="auth-page">
       <div className="card auth-card">
-        <h1 className="h2">Welcome back</h1>
-        <p className="muted">Log in to continue to your dashboard.</p>
+        <div className="auth-heading">
+          <span className="eyebrow">Welcome back</span>
+          <h1 className="h2">Continue your delivery flow</h1>
+        </div>
+        <p className="muted">Sign in to access your role-based dashboard.</p>
 
         {cameFromProtected && !error && (
           <div className="alert alert-info">Please log in to view that page.</div>

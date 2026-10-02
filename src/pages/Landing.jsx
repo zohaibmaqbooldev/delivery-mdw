@@ -47,8 +47,7 @@ export default function Landing() {
               One platform for customers, shops <span className="accent">and riders.</span>
             </h1>
             <p className="lead">
-              Delivery MDW brings everyone involved in a local delivery into one place — each with a
-              dashboard built for their part of the job.
+              Delivery MDW turns local delivery into a premium flow — from order to doorstep — with real-time clarity for every role.
             </p>
             <div className="row gap wrap">
               {signedIn ? (
@@ -66,36 +65,62 @@ export default function Landing() {
                 </>
               )}
             </div>
+            <div className="hero-meta row gap wrap" aria-label="Key metrics">
+              <span className="meta-pill">12 min avg ETA</span>
+              <span className="meta-pill">4 role dashboards</span>
+              <span className="meta-pill">Live order tracking</span>
+            </div>
           </div>
 
           <div className="hero-art" aria-hidden="true">
-            <svg viewBox="0 40 360 210">
-              <defs>
-                <linearGradient id="road" x1="0" x2="1">
-                  <stop offset="0" stopColor="var(--c-primary)" stopOpacity=".15" />
-                  <stop offset="1" stopColor="var(--c-primary)" stopOpacity=".45" />
-                </linearGradient>
-              </defs>
-              <path d="M20 230 C 110 150, 220 280, 340 170" fill="none" stroke="url(#road)" strokeWidth="14" strokeLinecap="round" />
-              <path d="M20 230 C 110 150, 220 280, 340 170" fill="none" stroke="var(--c-surface)" strokeWidth="2" strokeDasharray="10 12" />
-              <g transform="translate(22 150)">
-                <rect width="74" height="60" rx="8" fill="var(--c-surface)" stroke="var(--c-border)" />
-                <path d="M0 18h74" stroke="var(--c-border)" />
-                <rect x="10" y="4" width="54" height="10" rx="3" fill="var(--c-primary)" opacity=".85" />
-                <rect x="26" y="32" width="22" height="28" rx="3" fill="var(--c-primary-soft)" />
-              </g>
-              <g transform="translate(262 88)">
-                <path d="M0 34 L40 4 L80 34 V78 H0Z" fill="var(--c-surface)" stroke="var(--c-border)" />
-                <rect x="30" y="48" width="20" height="30" rx="3" fill="var(--c-accent)" opacity=".85" />
-              </g>
-              <g transform="translate(150 150)">
-                <circle cx="12" cy="44" r="11" fill="none" stroke="var(--c-text)" strokeWidth="4" />
-                <circle cx="62" cy="44" r="11" fill="none" stroke="var(--c-text)" strokeWidth="4" />
-                <path d="M12 44 L30 20 H52 L62 44" fill="none" stroke="var(--c-text)" strokeWidth="4" strokeLinejoin="round" />
-                <rect x="26" y="0" width="30" height="22" rx="4" fill="var(--c-primary)" />
-              </g>
-              <circle cx="302" cy="60" r="16" fill="var(--c-accent)" opacity=".9" />
-            </svg>
+            <div className="hero-panel card">
+              <div className="hero-badge-row">
+                <span className="hero-badge">On-time</span>
+                <span className="hero-badge soft">Live</span>
+              </div>
+              <svg viewBox="0 0 420 240" className="hero-illustration">
+                <defs>
+                  <linearGradient id="roadGlow" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0%" stopColor="#ffd7b5" />
+                    <stop offset="100%" stopColor="#ff8a3d" />
+                  </linearGradient>
+                </defs>
+                <rect x="32" y="28" width="150" height="104" rx="18" fill="#fff" stroke="#f1d8c6" />
+                <rect x="48" y="44" width="118" height="14" rx="7" fill="#ff8a3d" opacity="0.92" />
+                <rect x="48" y="70" width="58" height="44" rx="12" fill="#fff4eb" />
+                <rect x="112" y="70" width="46" height="44" rx="12" fill="#ffe4cc" />
+
+                <g transform="translate(196 38)">
+                  <path d="M56 20C56 8.9 64.9 0 76 0h44c11.1 0 20 8.9 20 20v31c0 18.6-12.8 34.4-30.2 38.8L101 94l-8.8-4.2C74.8 85.4 62 69.6 62 51V20h-6Zm54 0v42c0 7.7-6.3 14-14 14h-8.5z" fill="#fff" stroke="#f1d8c6" />
+                  <path d="M72 62h42" stroke="#ff8a3d" strokeWidth="6" strokeLinecap="round" />
+                  <path d="M102 42l12-14 6 6-12 14" fill="none" stroke="#ff8a3d" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+                </g>
+
+                <g transform="translate(150 120)">
+                  <path d="M0 78c34-44 82-66 150-66 71 0 105 28 135 66" fill="none" stroke="url(#roadGlow)" strokeWidth="18" strokeLinecap="round" />
+                  <path d="M0 78c34-44 82-66 150-66 71 0 105 28 135 66" fill="none" stroke="#fff" strokeWidth="5" strokeDasharray="10 12" strokeLinecap="round" />
+                </g>
+
+                <g transform="translate(72 138)">
+                  <circle cx="12" cy="62" r="12" fill="#101820" opacity="0.9" />
+                  <circle cx="80" cy="62" r="12" fill="#101820" opacity="0.9" />
+                  <path d="M12 62h36l24-34h13l19 34" fill="none" stroke="#101820" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
+                  <rect x="36" y="26" width="26" height="18" rx="5" fill="#ff8a3d" />
+                </g>
+                <circle cx="325" cy="52" r="22" fill="#ff8a3d" opacity="0.9" />
+                <path d="M320 52l5 5 10-12" fill="none" stroke="#fff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <div className="hero-panel-footer">
+                <div>
+                  <strong>24/7</strong>
+                  <span>Order support</span>
+                </div>
+                <div>
+                  <strong>4.8/5</strong>
+                  <span>Customer love</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

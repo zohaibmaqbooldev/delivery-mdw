@@ -93,8 +93,11 @@ export default function Signup() {
   return (
     <div className="auth-page">
       <div className="card auth-card">
-        <h1 className="h2">Create your account</h1>
-        <p className="muted">Choose how you'll use Delivery MDW.</p>
+        <div className="auth-heading">
+          <span className="eyebrow">Join now</span>
+          <h1 className="h2">Create your Delivery MDW account</h1>
+        </div>
+        <p className="muted">Choose how you'll use the platform and start ordering or delivering.</p>
 
         {error && (
           <div className="alert alert-error" role="alert">

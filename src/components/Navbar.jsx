@@ -27,11 +27,18 @@ export default function Navbar() {
       <div className="container navbar-inner">
         <Link to="/" className="brand" aria-label="Delivery MDW home">
           <span className="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="28" height="28">
-              <rect width="32" height="32" rx="8" fill="currentColor" />
-              <path d="M7 20V11h10v9M17 14h4l3 3v3h-7" fill="none" stroke="#fff" strokeWidth="2" strokeLinejoin="round" />
-              <circle cx="11" cy="21.5" r="2" fill="#fff" />
-              <circle cx="21" cy="21.5" r="2" fill="#fff" />
+            <svg viewBox="0 0 48 48" width="32" height="32" role="img" aria-label="Delivery MDW logo">
+              <defs>
+                <linearGradient id="brandGradient" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0%" stopColor="#ff9a4d" />
+                  <stop offset="100%" stopColor="#ff6a00" />
+                </linearGradient>
+              </defs>
+              <path d="M24 4c-8.7 0-15.8 7.1-15.8 15.8 0 11.6 15.8 23.8 15.8 23.8S39.8 31.4 39.8 19.8C39.8 11.1 32.7 4 24 4Z" fill="url(#brandGradient)" />
+              <path d="M24 11.6c-4.5 0-8.1 3.6-8.1 8.1s3.6 8.1 8.1 8.1 8.1-3.6 8.1-8.1-3.6-8.1-8.1-8.1Z" fill="#fff" opacity="0.95" />
+              <path d="M15.2 29.3 22.7 23l5.1 5.1 6.8-9.4" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M30.8 15.2h5.3l2.8 3.6v4.8h-8.1" fill="none" stroke="#ff7a1a" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M11.8 34.8h6.7" fill="none" stroke="#fff" strokeWidth="2.6" strokeLinecap="round" />
             </svg>
           </span>
           <span>
