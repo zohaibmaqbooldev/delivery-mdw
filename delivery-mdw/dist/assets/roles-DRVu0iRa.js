@@ -1,0 +1,1 @@
+var e={admin:{label:`Admin`,path:`/admin`},user:{label:`Customer`,path:`/user`},shop:{label:`Shop`,path:`/shop`},delivery:{label:`Delivery Boy`,path:`/delivery`}},t=[`user`,`shop`,`delivery`];function n(t){return e[t]?.path??`/`}function r(t){return e[t]?.label??t}export{n,r,t};

@@ -5,15 +5,18 @@ import react from '@vitejs/plugin-react'
 // project's Environment Variables. During `npm run dev` / `npm run preview` there is no such
 // function, so serve an empty config and the app falls back to VITE_* values from .env.
 function devEnvConfig() {
-  const serve = (server) =>
+  const serve = (server) => {
     server.middlewares.use('/env-config.js', (req, res) => {
       res.setHeader('Content-Type', 'application/javascript; charset=utf-8')
       res.setHeader('Cache-Control', 'no-store')
       res.end('window.__MDW_CONFIG__ = window.__MDW_CONFIG__ || {};\n')
     })
+  }
   return { name: 'mdw-dev-env-config', configureServer: serve, configurePreviewServer: serve }
 }
 
 export default defineConfig({
+  base: './',
   plugins: [react(), devEnvConfig()],
+  server: { host: true },
 })

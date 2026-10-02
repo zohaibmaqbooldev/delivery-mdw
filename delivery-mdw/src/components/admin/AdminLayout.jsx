@@ -25,6 +25,13 @@ export const ADMIN_LINKS = [
   { to: '/admin/profile', label: 'Profile', icon: 'profile' },
 ]
 
+const ADMIN_BOTTOM_LINKS = [
+  { to: '/admin', label: 'Home', icon: 'dashboard', end: true },
+  { to: '/admin/shops', label: 'Shops', icon: 'shops' },
+  { to: '/admin/orders', label: 'Orders', icon: 'orders' },
+  { to: '/admin/profile', label: 'Profile', icon: 'profile' },
+]
+
 function Icon({ name }) {
   return (
     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -54,6 +61,19 @@ function SidebarLinks({ onLogout, signingOut }) {
   )
 }
 
+function AdminBottomNav() {
+  return (
+    <nav className="admin-bottom-nav" aria-label="Admin navigation">
+      {ADMIN_BOTTOM_LINKS.map((link) => (
+        <NavLink key={link.to} to={link.to} end={link.end} className="admin-bottom-link">
+          <Icon name={link.icon} />
+          <span>{link.label}</span>
+        </NavLink>
+      ))}
+    </nav>
+  )
+}
+
 export default function AdminLayout() {
   const { signOut } = useAuth()
   const navigate = useNavigate()
@@ -62,6 +82,11 @@ export default function AdminLayout() {
   const [signingOut, setSigningOut] = useState(false)
   const toggleRef = useRef(null)
   const drawerRef = useRef(null)
+
+  useEffect(() => {
+    document.body.classList.add('has-tabbar')
+    return () => document.body.classList.remove('has-tabbar')
+  }, [])
 
   const current =
     [...ADMIN_LINKS].sort((a, b) => b.to.length - a.to.length).find((l) => location.pathname.startsWith(l.to))?.label ?? 'Admin'
@@ -147,6 +172,7 @@ export default function AdminLayout() {
           <Outlet />
         </Suspense>
       </div>
+      <AdminBottomNav />
     </div>
   )
 }

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Delivery MDW</string>
+    <string name="title_activity_main">Delivery MDW</string>
+    <string name="package_name">com.delivery.mdw</string>
+    <string name="custom_url_scheme">com.delivery.mdw</string>
+</resources>

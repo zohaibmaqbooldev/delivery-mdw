@@ -1,0 +1,15 @@
+{
+  "appId": "com.delivery.mdw",
+  "appName": "Delivery MDW",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1200,
+      "backgroundColor": "#0f766e",
+      "showSpinner": false,
+      "androidSplashResourceName": "ic_delivery_mark",
+      "androidScaleType": "CENTER"
+    }
+  }
+}

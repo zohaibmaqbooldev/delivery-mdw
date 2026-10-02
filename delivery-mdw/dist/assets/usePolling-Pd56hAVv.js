@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CbXtAM7H.js";import{i as t}from"./jsx-runtime-BWAcg3y8.js";var n=e(t(),1);function r(e,t=3e4){(0,n.useEffect)(()=>{let n=()=>document.visibilityState===`visible`&&e(),r=setInterval(n,t);return document.addEventListener(`visibilitychange`,n),()=>{clearInterval(r),document.removeEventListener(`visibilitychange`,n)}},[e,t])}export{r as t};
