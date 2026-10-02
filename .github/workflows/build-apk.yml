@@ -3,6 +3,9 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: delivery-mdw
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -14,13 +17,9 @@ jobs:
           java-version: 21
       - uses: android-actions/setup-android@v3
       - run: npm install
-        working-directory: delivery-mdw
       - run: npm run build
-        working-directory: delivery-mdw
       - run: npx cap sync android
-        working-directory: delivery-mdw
       - run: cd android && chmod +x gradlew && ./gradlew assembleDebug --stacktrace
-        working-directory: delivery-mdw
       - uses: actions/upload-artifact@v4
         with:
           name: app-debug-apk
