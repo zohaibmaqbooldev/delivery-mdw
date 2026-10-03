@@ -3,6 +3,11 @@
   "appName": "Delivery MDW",
   "webDir": "dist",
   "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true,
+    "allowNavigation": ["*.supabase.co"]
+  },
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 1200,
