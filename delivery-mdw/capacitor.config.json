@@ -2,19 +2,9 @@
   "appId": "com.delivery.mdw",
   "appName": "Delivery MDW",
   "webDir": "dist",
-  "bundledWebRuntime": false,
   "server": {
-    "androidScheme": "https",
+    "url": "https://delivery-mdw.vercel.app",
     "cleartext": true,
-    "allowNavigation": ["*.supabase.co"]
-  },
-  "plugins": {
-    "SplashScreen": {
-      "launchShowDuration": 1200,
-      "backgroundColor": "#0f766e",
-      "showSpinner": false,
-      "androidSplashResourceName": "ic_delivery_mark",
-      "androidScaleType": "CENTER"
-    }
+    "androidScheme": "https"
   }
 }
