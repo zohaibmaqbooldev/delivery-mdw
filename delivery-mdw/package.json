@@ -17,6 +17,7 @@
     "@capacitor/core": "^8.5.2",
     "@capacitor/splash-screen": "^8.0.2",
     "@supabase/supabase-js": "^2.117.0",
+    "browser-image-compression": "^2.0.2",
     "leaflet": "^1.9.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

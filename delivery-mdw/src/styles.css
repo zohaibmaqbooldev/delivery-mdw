@@ -1316,11 +1316,18 @@ code {
 .switch-row input:checked + .switch::after { transform: translateX(18px); }
 .switch-row input:focus-visible + .switch { outline: 3px solid color-mix(in srgb, var(--c-primary) 55%, transparent); outline-offset: 2px; }
 
-.image-picker { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.image-picker { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; border: 1.5px dashed transparent; border-radius: 14px; padding: 8px; transition: border-color 0.15s, background-color 0.15s; }
+.image-picker.is-dragging { border-color: var(--c-primary); background: color-mix(in srgb, var(--c-primary) 8%, transparent); }
+.image-picker.is-busy .image-picker-preview { opacity: 0.55; }
 .image-picker-preview { width: 96px; height: 96px; border-radius: 12px; object-fit: cover; font-size: 1.4rem; border: 1px solid var(--c-border); }
 .image-picker-actions { display: grid; gap: 6px; justify-items: start; }
 .image-picker-actions label.btn { cursor: pointer; }
 .image-picker-actions:has(input:focus-visible) label.btn { outline: 3px solid color-mix(in srgb, var(--c-primary) 55%, transparent); }
+.image-picker-status { display: inline-flex; align-items: center; gap: 8px; color: var(--c-muted); }
+.image-picker-ok { color: var(--c-success, #15803d); font-weight: 600; }
+.image-picker-spinner { width: 14px; height: 14px; border-radius: 50%; border: 2px solid color-mix(in srgb, var(--c-primary) 30%, transparent); border-top-color: var(--c-primary); animation: image-picker-spin 0.8s linear infinite; }
+@keyframes image-picker-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .image-picker-spinner { animation-duration: 2.4s; } }
 
 .open-card { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
 .shop-profile-head { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
